@@ -1,0 +1,19 @@
+# Command ROS Tutorial 4
+
+ls
+cd ros2_ws
+ls
+cd src
+ls
+ros2 pkg create --build-type ament_python my_robot_controller		# command ROS2
+ls
+cd my_robot_controller
+ls
+cd ..
+code .
+cd ..
+colcon build		# command ROS2
+ls
+cd build
+ls
+cd ..

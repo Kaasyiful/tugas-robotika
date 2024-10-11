@@ -1,0 +1,15 @@
+# Command ROS Tutorial 3
+
+ls
+mkdir ros2_ws
+cd ros2_ws
+ls
+mkdir src
+ls
+colcon build		# command ROS2
+ls
+cd install
+ls
+cd ~/ros2_ws
+source install/setup.bash
+echo "source ~/ros2_ws/install/setup.bash"

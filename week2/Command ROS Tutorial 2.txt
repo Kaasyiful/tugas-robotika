@@ -1,0 +1,14 @@
+# Command ROS Tutorial 2
+
+source opt/ros/iron/setup.bash
+echo "source opt/ros/iron/setup.bash" >> ~/.bashrc
+printenv | grep -i ROS
+ros2 run demo_nodes_cpp talker		# command ROS2
+rqt					# command ROS2
+ros2 run demo_nodes_py listener		# command ROS2
+#rqt (jika jendela rqt sebelumnya dimatikan)
+ros2 run turtlesim turtlesim_node	# command ROS2
+#rqt
+ros2 run turtlesim turtle_teleop_key	# command ROS2
+#rqt
+
