@@ -1,0 +1,6 @@
+cd ws_moveit/src
+ros2 pkg create --build-type ament_cmake --dependencies moveit_ros_planning_interface rclcpp --node-name hello_moveit hello_moveit
+colcon build --mixin debug
+cd ..
+source install/setup.bash
+ros2 run hello_moveit hello_moveit

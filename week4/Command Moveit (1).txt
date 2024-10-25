@@ -1,0 +1,15 @@
+sudo apt install python3-colcon-mixin
+colcon mixin add default https://raw.githubusercontent.com/colcon/colcon-mixin-repository/master/index.yaml
+colcon mixin update default
+sudo apt install python3-vcstool
+mkdir -p ~/ws_moveit/src
+cd ~/ws_moveit/src
+git clone -b main https://github.com/moveit/moveit2_tutorials
+#unzip ~/Downloads/moveit2_tutorials_main	#gagal cloning
+vcs import --recursive < moveit2_tutorials/moveit2_tutorials.repos
+#unzip ~/Downloads/moveit_resources_ros2	#gagal cloning
+ls
+sudo apt update && rosdep install -r --from-paths . --ignore-src --rosdistro $ROS_DISTRO -y
+cd ..
+colcon build --mixin release
+echo "source ~/ws_moveit/install/setup.bash" > ~/.bashrc
