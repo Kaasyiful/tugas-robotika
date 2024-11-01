@@ -1,0 +1,21 @@
+pip install conan==1.59.0
+# restart untuk menyelesaikan instalasi conan
+
+sudo apt install python-is-python3 \
+ros-noetic-amcl \
+ros-noetic-base-local-planner \
+ros-noetic-map-server \
+ros-noetic-move-base \
+ros-noetic-navfn \
+libgoogle-glog-dev
+
+git clone https://github.com/ai-winter/ros_motion_planning.git
+
+cd ros_motion_planning/scripts
+./build.sh
+./main.sh
+./killpro.sh
+
+nano main.sh
+./main.sh
+rosrun sim_env goal_publisher.py
