@@ -1,0 +1,8 @@
+# params.yaml
+
+num_nodes: 100
+num_neighbors: 5
+x_limits: [0, 100]
+y_limits: [0, 100]
+start: [10, 10]
+goal: [90, 90]

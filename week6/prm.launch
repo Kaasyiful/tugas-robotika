@@ -1,0 +1,5 @@
+<!-- prm.launch -->
+
+<launch>
+    <node pkg="prm" type="prm.py" name="prm_node" output="screen" args="$(find prm)/params.yaml"/>
+</launch>

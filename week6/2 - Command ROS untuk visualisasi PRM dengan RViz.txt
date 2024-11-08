@@ -1,0 +1,14 @@
+git clone https://github.com/nishadg246/Probabilistic-Roadmap.git prm_ws
+cd prm_ws
+catkin_make
+source devel/setup.bash
+roscore
+rosrun rrt-planning prm
+rviz
+
+nano ./src/rrt-planning/src/prm.cpp 	#untuk mengubah banyak node
+
+catkin_make		#untuk membangun ulang
+roscore			#untuk eksekusi ulang
+rosrun rrt-planning prm		
+rviz				#untuk visualisasi ulang
