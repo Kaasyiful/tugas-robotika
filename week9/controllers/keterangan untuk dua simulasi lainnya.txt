@@ -1,0 +1,1 @@
+robot controller yang dipakai di simulasi 'camera_motion_blur' dan 'camera_noise_mask' sama dengan controller yand dipakai pada simulasi 'camera'.
