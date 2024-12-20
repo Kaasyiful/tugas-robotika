@@ -1,0 +1,126 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/containers/protos/WoodenBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/containers/protos/CardboardBox.proto"
+
+WorldInfo {
+  info [
+    "The model of the e-puck 2 robot"
+  ]
+  title "e-puck simulation"
+}
+Viewpoint {
+  orientation 0.6318474840054233 0.003604012388009785 -0.7750843618927705 3.063383009920268
+  position 1.2750226666870474 0.626436665094118 5.598316456409751
+  follow "e-puck2"
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  translation 0 0.05 0
+  rotation 0 1 0 0
+  floorSize 2 2
+}
+WoodenBox {
+  translation -0.683174 0.2 0.05
+  rotation 0 0 1 0.5
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation 0.35 0.75 0.05
+  rotation 0 0 1 4.96782
+  name "wooden box(1)"
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation -0.35471 -0.5 0.05
+  rotation 0 0 1 5.36782
+  name "wooden box(2)"
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation -0.59851 -0.182884 0.05
+  rotation 0 0 1 5.36782
+  name "wooden box(9)"
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation -0.129195 -0.793336 0.05
+  rotation 0 0 1 5.36782
+  name "wooden box(7)"
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation 0.36 0.3 0.05
+  rotation 0 0 1 5.36782
+  name "wooden box(3)"
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation 0.304372 -0.234705 0.05
+  rotation 0 0 -1 -0.13183530717958636
+  name "wooden box(5)"
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation 0.671158 -0.186063 0.05
+  rotation 0 0 -1 -0.13183530717958636
+  name "wooden box(8)"
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation 0.362215 -0.670886 0.05
+  rotation 0 0 -1 -0.13183530717958636
+  name "wooden box(6)"
+  size 0.1 0.1 0.1
+}
+CardboardBox {
+  translation 0 -0.299 0.05
+  size 0.1 0.1 0.1
+}
+CardboardBox {
+  translation -0.27 0.401 0.05
+  name "cardboard box(1)"
+  size 0.1 0.1 0.1
+}
+CardboardBox {
+  translation -0.01 0.581 0.05
+  name "cardboard box(5)"
+  size 0.1 0.1 0.1
+}
+CardboardBox {
+  translation -0.27 0.001 0.05
+  name "cardboard box(4)"
+  size 0.1 0.1 0.1
+}
+CardboardBox {
+  translation -0.27 0.401 0.05
+  name "cardboard box(2)"
+  size 0.1 0.1 0.1
+}
+CardboardBox {
+  translation 0.72 0.401 0.05
+  name "cardboard box(3)"
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation -0.66 0.65 0.05
+  rotation 0 0 1 5.36782
+  name "wooden box(4)"
+  size 0.1 0.1 0.1
+}
+E-puck {
+  translation 0.000239596 0.300996 -3.23585e-06
+  rotation -0.00015506135422074793 0.00015518319039346508 0.9999999759370766 1.570000616701327
+  name "e-puck2"
+  controller "kalman_filter_controller"
+  version "2"
+  camera_width 160
+  camera_height 120
+}
