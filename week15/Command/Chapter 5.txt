@@ -1,0 +1,46 @@
+# setelah mengunduh CoppeliaSim Edu secara manual
+
+# Git cloning
+#git clone https://github.com/PacktPublishing/Mastering-ROS-for-Robotics-Programming-Third-edition.git
+
+cd ~/Download
+tar vxf CoppeliaSim_Edu_V4_2_0_Ubuntu20_04.tar.xz
+mv CoppeliaSim_Edu_V4_2_0_Ubuntu20_04 CoppeliaSim
+mv CoppeliaSim ~
+echo "export COPPELIASIM_ROOT=/home/husain/CoppeliaSim/ >>" ~/.bashrc  
+
+cd Mastering-ROS-for-Robotics-Programming-Third-edition
+cp -R ./Chapter5/* ~/catkin_ws/src
+
+cd ~/catkin_ws/src
+catkin_make
+
+roscore
+
+cd $COPPELIASIM_ROOT
+./coppeliaSim.sh
+
+# setelah memuat plugin_publisher_subscriber.ttt
+
+rqt_image_view
+
+# setelah memuat seven_dof_arm.ttt
+
+rostopic pub /csim_demo/seven_dof_arm/elbow_pitch/cmd std_msgs/Float32 "data: 1.0"
+rostopic echo /csim_demo/seven_dof_arm/elbow_pitch/state
+
+# setelah mengunduh dan menginstal Webots (R2021a) secara langsung
+
+roscore
+webots
+
+# setelah memuat world e_puck_ros.wbt
+
+rostopic echo /model_name
+rosservice list | grep "camera"
+rosservice call /e_puck_23717_kasyif0/camera/enable "value: true"
+
+# setelah memuat (kembali) keyboard_teleop.launch
+
+rosrun webots_demo_pkg e_puck_manager
+roslaunch diff_wheeled_robot_control keyboard_teleop.launch

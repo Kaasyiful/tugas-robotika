@@ -1,0 +1,16 @@
+echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+
+# Git cloning
+#git clone https://github.com/PacktPublishing/Mastering-ROS-for-Robotics-Programming-Third-edition.git
+
+cd Mastering-ROS-for-Robotics-Programming-Third-edition
+cp -R ./Chapter3/* ~/catkin_ws/src
+
+cd ~/catkin_ws
+catkin_make
+
+roslaunch mastering_ros_robot_description_pkg view_demo.launch
+
+roslaunch mastering_ros_robot_description_pkg view_arm.launch
+
+roslaunch mastering_ros_robot_description_pkg view_mobile_robot.launch

@@ -1,0 +1,23 @@
+# setelah mengunduh dan/atau membangun seven_dof_arm_gazebo
+
+# Git cloning
+#git clone https://github.com/PacktPublishing/Mastering-ROS-for-Robotics-Programming-Third-edition.git
+
+cd Mastering-ROS-for-Robotics-Programming-Third-edition
+cp -R ./Chapter4/* ~/catkin_ws/src
+cp -R ./Chapter6/* ~/catkin_ws/src
+
+cd ~/catkin_ws
+catkin_make
+
+cd seven_dof_arm_gazebo/
+
+roslaunch seven_dof_arm_gazebo seven_dof_arm_gazebo_control.launch
+rostopic pub /seven_dof_arm/joint4_position_controller/command std_msgs/Float64 "data: 1.0"
+rostopic pub /seven_dof_arm/joint3_position_controller/command std_msgs/Float64 "data: 1.0"
+
+# setelah mengunduh dan/atau membangun diff_wheeled_robot_gazebo dan diff_wheeled_robot_control
+
+roslaunch diff_wheeled_robot_gazebo diff_wheeled_gazebo_full.launch
+
+roslaunch diff_wheeled_robot_control keyboard_teleop.launch
